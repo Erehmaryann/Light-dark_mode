@@ -21,6 +21,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -51,11 +52,13 @@ h2 {
 /* Navigation */
 nav {
   z-index: 10;
-  position: fixed;
+  /* position: fixed; */
+  position: sticky;
+  top: 0;
   font-size: 24px;
   letter-spacing: 3px;
   padding: 25px;
-  width: 100vw;
+  /* width: 100vw; */
   background: rgb(255 255 255 / 50%);
 }
 
