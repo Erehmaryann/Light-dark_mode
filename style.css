@@ -57,6 +57,7 @@ h2 {
 /* Navigation */
 nav {
   z-index: 10;
+  font-family: Oswald, sans-serif;
   /* position: fixed; */
   position: sticky;
   top: 0;
