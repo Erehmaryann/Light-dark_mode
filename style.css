@@ -50,6 +50,7 @@ h1 {
 
 h2 {
   font-size: 32px;
+  color: var(--on-background-alt);
   font-weight: normal;
 }
 
