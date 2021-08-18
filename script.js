@@ -10,6 +10,7 @@ const textBox = document.querySelector("#textbox");
 //dark mode styles
 function darkMode() {
   nav.style.backgroundColor = "rgb(0 0 0 / 50%)";
+  textBox.style.backgroundColor = "rgb(255 255 255 / 50%)";
 }
 
 // Switches theme dynamically
