@@ -8,7 +8,9 @@ const image3 = document.querySelector("#image3");
 const textBox = document.querySelector("#textbox");
 
 //dark mode styles
-function darkMode() {}
+function darkMode() {
+  nav.style.backgroundColor = "rgb(0 0 0 / 50%)";
+}
 
 // Switches theme dynamically
 function switchTheme(e) {
