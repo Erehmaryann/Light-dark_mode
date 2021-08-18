@@ -1,5 +1,11 @@
 // Variables
 const toggleSwitch = document.querySelector('input[type="checkbox"]');
+const nav = document.querySelector("#nav");
+const toggleIcon = document.querySelector("#toggle-icon");
+const image1 = document.querySelector("#image1");
+const image2 = document.querySelector("#image2");
+const image3 = document.querySelector("#image3");
+const textBox = document.querySelector("#textbox");
 
 // Switches theme dynamically
 function switchTheme(e) {
