@@ -7,6 +7,9 @@ const image2 = document.querySelector("#image2");
 const image3 = document.querySelector("#image3");
 const textBox = document.querySelector("#text-box");
 
+//Dark or Light theme Images
+function imageMode(color) {}
+
 //Dark mode styles
 function darkMode() {
   nav.style.backgroundColor = "rgb(0 0 0 / 50%)";
