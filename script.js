@@ -14,6 +14,7 @@ function darkMode() {
   toggleIcon.children[0].textContent = "Dark Mode";
   toggleIcon.children[1].classList.remove("fa-sun");
   toggleIcon.children[1].classList.add("fa-moon");
+  image1.setAttribute("src", "./img/undraw_proud_coder_dark.svg");
 }
 
 // Switches theme dynamically
