@@ -37,9 +37,11 @@ function switchTheme(e) {
   if (e.target.checked) {
     //returns the root Element of the document(html)
     document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
     darkMode();
   } else {
     document.documentElement.removeAttribute("data-theme");
+    localStorage.removeItem("theme");
     lightMode();
   }
 }
