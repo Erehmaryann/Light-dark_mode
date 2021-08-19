@@ -14,22 +14,19 @@ function imageMode(color) {
   image3.setAttribute("src", `./img/undraw_conceptual_idea_${color}.svg`);
 }
 
-//Dark mode styles
-function darkMode() {
-  nav.style.backgroundColor = "rgb(0 0 0 / 50%)";
-  textBox.style.backgroundColor = "rgb(255 255 255 / 50%)";
-  toggleIcon.children[0].textContent = "Dark Mode";
-  toggleIcon.children[1].classList.replace("fa-sun", "fa-moon");
-  imageMode("dark");
-}
-
-// Light mode styles
-function lightMode() {
-  nav.style.backgroundColor = "rgb(255 255 255 / 50%)";
-  textBox.style.backgroundColor = "rgb(0 0 0 / 50%)";
-  toggleIcon.children[0].textContent = "Light Mode";
-  toggleIcon.children[1].classList.replace("fa-moon", "fa-sun");
-  imageMode("light");
+function toggleModes(isDark) {
+  // Dark mode
+  nav.style.backgroundColor = isDark
+    ? "rgb(0 0 0 / 50%)"
+    : "rgb(255 255 255 / 50%)";
+  textBox.style.backgroundColor = isDark
+    ? "rgb(255 255 255 / 50%)"
+    : "rgb(0 0 0 / 50%)";
+  toggleIcon.children[0].textContent = isDark ? "Dark Mode" : "Light Mode";
+  isDark
+    ? toggleIcon.children[1].classList.replace("fa-sun", "fa-moon")
+    : toggleIcon.children[1].classList.replace("fa-moon", "fa-sun");
+  isDark ? imageMode("dark") : imageMode("light");
 }
 
 // Switches theme dynamically
@@ -38,11 +35,11 @@ function switchTheme(e) {
     //returns the root Element of the document(html)
     document.documentElement.setAttribute("data-theme", "dark");
     localStorage.setItem("theme", "dark");
-    darkMode();
+    toggleModes(true);
   } else {
     document.documentElement.removeAttribute("data-theme");
     localStorage.removeItem("theme");
-    lightMode();
+    toggleModes(false);
   }
 }
 
@@ -55,8 +52,8 @@ if (currentTheme) {
   document.documentElement.setAttribute("data-theme", currentTheme);
   if (currentTheme === "dark") {
     toggleSwitch.checked = true;
-    darkMode();
+    toggleModes(true);
   } else {
-    lightMode();
+    toggleModes(false);
   }
 }
