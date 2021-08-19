@@ -48,3 +48,6 @@ function switchTheme(e) {
 
 // Event listeners
 toggleSwitch.addEventListener("change", switchTheme);
+
+// Check local storage for theme
+const CurrentTheme = localStorage.getItem("theme");
